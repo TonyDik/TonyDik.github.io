@@ -1,0 +1,28 @@
+body {
+    background-color: #f5f9ec;
+}
+.container {
+    width: 235px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.row div {
+    height: 300px;
+}
+#buffer {
+    height: 45px;
+}
+#header {
+    background-repeat: repeat-x;
+    background-position: top left;
+    background-image: url(/images/header_gradient.png);
+    height: 135px;
+    min-width: 920px;
+}
+#logo {
+    padding-top: 37.5px;
+    padding-bottom: 37.5px;
+}
+header .col-md-3 {
+    padding-left: 0px;
+}
