@@ -2,7 +2,7 @@ body {
     background-color: #f5f9ec;
 }
 .container {
-    width: 235px;
+    width: 1235px;
     margin-left: 0px;
     padding-left: 0px;
 }
@@ -13,9 +13,7 @@ body {
     height: 45px;
 }
 #header {
-    background-repeat: repeat-x;
-    background-position: top left;
-    background-image: url(/images/header_gradient.png);
+    background: url("../images/header_gradient.png") repeat-x top left;
     height: 135px;
     min-width: 920px;
 }
