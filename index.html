@@ -1,222 +1,34 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="en">
+
 <head>
-    
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KMDNNV9');</script>
-<!-- End Google Tag Manager -->
-    
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Электронная библиотека диссертаций</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Bubble sort</title>
 </head>
+
 <body>
-    
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMDNNV9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
-<header>
-    <div class="container-fluid" >
-        <div class="row">
-        <div id="buffer"></div>
-        <div id="header">
-             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 head_left">
-                 <a href="index.html" title="Дикарев">
-                     <img id="logo" src="images/logo_ru.gif" alt="Дикарев">
-                 </a>
-             </div>
-             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 head_right">
-                <!--<div class="row" id="bebe"></div>-->
-                <div class="row" id="slogan">
-                    <a class="slogan" href="index.html" title="Электронная библиотека диссертаций">
-                        <img id="caption" src="images/caption-ru.png" alt="Электронная библиотека диссертаций">
-                    </a>
-                </div>
-                <div class="row" id="input">
-                    <input id="v0" name="v0" class="input" type="text">
-                    <button class="btn btn-mini" type="button">Найти</button>
-                </div>
-             </div>
-        </div>
-        </div>
-    </div>
-</header>
-<main>
-    <div class="container-fluid">
-        <div class="row" id="maincontainer">
-            <div class="leftcolumn col-md-3 col-lg-3 col-sm-3 col-xs-3">
-                <ul class="nav nav-list">
-                    <li><a href="https://ya.ru/">О проекте...</a></li>
-                    <li><a href="https://ya.ru/">Виртуальные читальные залы...</a></li>
-                    <li><a href="index.html">Для юридических лиц...</a> </li>
-                    <li><a href="index.html">Для физических лиц...</a> </li>
-                    <li><a href="index.html">Наши агенты...</a> </li>
-                    <li><a href="index.html">ОЭБД...</a> </li>
-                    <li><a href="index.html">Страница эксперта...</a> </li>
-                    <li><a href="index.html">Контакты...</a> </li>
-                </ul>
-                <!--Баннер-->
-                <div class="banner" >
-                    <a href="http://god-kino2016.ru/">
-                        <img id="god_kino" src="images/logo2016.png">
-                    </a>
-                </div>
-            </div>
-            <div class="centercolumn col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                <div class="row hotnews">
-                <p>
-                    <a class="banner" href="index.html" title="XX юбилейная Международная конференция и выставка «LIBCOM–2016»: «Информационные технологии, компьютерные системы и издательская продукция для библиотек»">
-                        <img id="news" src="images/church.jpg" alt="XX юбилейная Международная конференция и выставка «LIBCOM–2016»: «Информационные технологии, компьютерные системы и издательская продукция для библиотек»">
-                    </a>
-                    <a href="index.html" title="XX юбилейная Международная конференция и выставка «LIBCOM–2016»: «Информационные технологии, компьютерные системы и издательская продукция для библиотек»">
-                        XX юбилейная Международная конференция и выставка «LIBCOM–2016»: «Информационные технологии, компьютерные системы и издательская продукция для библиотек»
-                    </a>
-                    <p class="more_info">
-                    Двадцатая Международная Конференция и выставка «LIBCOM–2016»:
-                    «Информационные технологии, компьютерные системы и издательская продукция для библиотек»
-                    пройдет с 14 по 18 ноября 2016 года в туристско-гостиничном комплексе “Турцентр” города Суздаля Владимирской области.
-                    </p>
-                </p>
-                </div>
-                <div class="row news_all">
-                    <div class="col-md-8 col-lg-8 col-sm-8 col-xs-8 news_left">
-                            <h3>Новости и события</h3>
-                            <div class="news">
-                                <span>15 ноября 2016</span><br>
-                                <h1>XX юбилейная Международная конференция и выставка «LIBCOM–2016»: «Информационные технологии, компьютерные системы и издательская продукция для библиотек»</h1>
-                                <p>Двадцатая Международная Конференция и выставка «LIBCOM–2016»: «Информационные технологии, компьютерные системы и издательская продукция для библиотек» пройдет с 14 по 18 ноября 2016 года в туристско-гостиничном комплексе “Турцентр” города Суздаля Владимирской области.</p>
-                                <a href="http://diss.rsl.ru/?menu=news/397/&amp;lang=ru" title="Подробнее">Подробнее...</a>
-                            </div>
+    <h1 class="text-center">
+        Bubble sort
+        <button class="btn btn-primary mx-4" type="button">Sort</button></h1>
 
-                            <div class="news">
-                                <span>31 октября 2016</span><br>
-                                <h1>Впечатления о четвертой Международной конференции  «Электронные научные и образовательные ресурсы: создание,  продвижение и использование»,  24-30 сентября 2016 года, Эшторил (Португалия)</h1>
-                                <p>Организатором конференции выступило некоммерческое партнерство «Национальный электронно-информационный консорциум» (НП «НЭИКОН») при поддержке Министерства образования и науки Российской Федерации.</p>
-                                <a href="http://diss.rsl.ru/?menu=news/389/&amp;lang=ru" title="Подробнее">Подробнее...</a>
-                            </div>
-                            <div class="news"><a href="http://diss.rsl.ru/?menu=news/&amp;lang=ru">Все новости</a></div>
-                    </div>
-                    <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 news_right">
-                            <h3>Для пользователей</h3>
-                        <ul id="submenu">
-                            <li><a class="firstline" href="/?menu=disscatalog/" title="Каталог"><span>Каталог</span></a></li>
-                            <li><a href="/?menu=about" title="Об электронной библиотеке"><span>Об электронной библиотеке</span></a></li>
-                            <li><a href="/?menu=faq" title="Частые вопросы"><span>Частые вопросы</span></a></li>
-                            <li><a href="/?menu=rules" title="Правила пользования"><span>Правила пользования</span></a></li>
-                            <li><a href="/?menu=about/31/&amp;lang=ru" title="Открытая Электронная Библиотека Диссертаций"><span>Открытая Электронная Библиотека Диссертаций</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="rightcolumn col-lg-3 col-md-3 col-sm-3 col-xs-3 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
-                <dl>
-                    <dt>
-                        <a href="page.html" title="Российская Государственная Библиотека">
-                            <img src="images/rgb.gif" alt="Российская Государственная Библиотека">
-                        </a>
+    <div class="d-flex flex-row m-4">
 
-                    </dt>
-                    <dd>
-                        <h1>
-                            <a href="index.html" title="Российская Государственная Библиотека">Российская Государственная Библиотека</a>
-                        </h1>
-                        <p></p>
-                    </dd>
+    </div>
 
-                    <dt>
-                        <a href="index.html" title="Фонд MФГС">
-                            <img src="images/mfgs.gif" alt="Фонд МФГС"></a>
 
-                    </dt>
-                    <dd>
-                        <h1><a href="index.html" title="Фонд MФГС">Фонд MФГС</a></h1>
-                        <p>Межгосударственный фонд гуманитарного сотрудничества государств-участников СНГ</p>
-                    </dd>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 
-                    <dt>
-                        <a href="index.html" title="Антиплагиат.РГБ">
-                            <img src="images/antiplagiat.gif" alt="Антиплагиат.РГБ"></a>
+    <script src="./main.js"></script>
 
-                    </dt>
-                    <dd>
-                        <h1><a href="index.html" title="Антиплагиат.РГБ">Антиплагиат.РГБ</a></h1>
-                        <p></p>
-                    </dd>
-
-                    <dt>
-                        <a href="index.html" title="DVS">
-                            <img src="images/dvs.gif" alt="DVS"></a>
-
-                    </dt>
-                    <dd>
-                        <h1><a href="index.html" title="DVS">DVS</a></h1>
-                        <p>Система просмотра электронной документации в защищенном режиме</p>
-                    </dd>
-                </dl>
-            </div>
-        </div>
-    </div>
-</main>
-<footer>
-<div class="container-fluid">
-    <div class="row">
-    <div id="footercontainer">
-    <div class="row" id="footerrow1">
-            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 foot_left">
-                <a href="http://diss.rsl.ru/?lang=ru" title="">Главная</a>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 foot_center">
-                <a href="http://diss.rsl.ru/?menu=news&amp;lang=ru" title="Архив новостей">Архив новостей</a>
-            </div>
-            <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5 foot_right">
-                <a href="http://diss.rsl.ru/?menu=disscatalog&amp;lang=ru" title="Расширенный поиск">Расширенный поиск</a>
-            </div>
-    </div>
-    <div class="row" id="footerrow2">
-            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 foot_left">
-                <a href="http://diss.rsl.ru/?lang=ru" title="">Карта сайта</a>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 foot_center">
-                <a href="http://diss.rsl.ru/?menu=news&amp;lang=ru" title="Архив новостей">Подписаться на новости</a>
-            </div>
-            <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5 foot_right">
-                <a href="http://diss.rsl.ru/?menu=disscatalog&amp;lang=ru" title="Расширенный поиск">Правовая основа предоставления информации</a>
-            </div>
-    </div>
-    <div class="row" id="footerrow3">
-        <div class="col-md-7 col-lg-7 col-sm-7 col-xs-7 foot_left">
-            <p>©&nbsp;Электронная Библиотека Диссертаций 2003-2016</p>
-        </div>
-        <div style="color: white" class="col-md-5 col-lg-5 col-sm-5 col-xs-5 foot_right">
-            <a href="http://diss.rsl.ru/?menu=news&amp;lang=ru" title="Архив новостей">Правила пользования</a>
-            <a href="http://diss.rsl.ru/?menu=disscatalog&amp;lang=ru" title="Расширенный поиск">Частые вопросы</a>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</div>
-</footer>
- <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.js"></script>
 </body>
+
 </html>
